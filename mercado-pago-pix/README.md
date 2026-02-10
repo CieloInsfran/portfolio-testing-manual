@@ -30,7 +30,5 @@ Los ejercicios están basados en **escenarios realistas**, aunque no corresponda
 - GitHub (documentación)
 
 ---
-📌 *Este portafolio se encuentra en constante actualización a medida que avanzo en mis estudios.*
-
 
 📌 *Este portafolio se encuentra en constante actualización a medida que avanzo en mis estudios.*
