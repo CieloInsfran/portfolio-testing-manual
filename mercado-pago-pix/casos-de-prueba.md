@@ -3,84 +3,66 @@
 
 ---
 
-### 🟢 CP-01 – Pago exitoso con QR válido
+### 🟢 CP-01 – Pago exitoso con código QR válido
 
 **Precondiciones:**  
-Usuario con sesión iniciada y saldo suficiente.
+- Usuario con sesión iniciada.
+- Usuario con saldo suficiente.
 
 **Pasos:**
 1. Abrir la aplicación Mercado Pago.
-2. Seleccionar “Pagar con QR”.
+2. Seleccionar la opción “Pagar con QR”.
 3. Escanear un código QR válido.
-4. Visualizar monto y datos del comercio.
+4. Verificar el monto y los datos del comercio.
 5. Confirmar el pago.
 
 **Resultado esperado:**  
-El sistema procesa el pago y muestra el mensaje “Pago realizado con éxito”.
+El sistema procesa el pago correctamente y muestra el mensaje “Pago realizado con éxito”.
 
 ---
 
-### 🔴 CP-02 – Código QR inválido
+### 🔴 CP-02 – Pago rechazado por saldo insuficiente
 
 **Precondiciones:**  
-Usuario con sesión iniciada.
+- Usuario con sesión iniciada.
+- Usuario con saldo insuficiente.
 
 **Pasos:**
 1. Abrir la aplicación Mercado Pago.
-2. Seleccionar “Pagar con QR”.
+2. Seleccionar la opción “Pagar con QR”.
+3. Escanear un código QR válido.
+4. Verificar el monto y los datos del comercio.
+5. Confirmar el pago.
+
+**Resultado esperado:**  
+El sistema muestra un mensaje indicando saldo insuficiente y no realiza la transacción.
+
+---
+
+### 🔴 CP-03 – Escaneo de código QR inválido
+
+**Precondiciones:**  
+- Usuario con sesión iniciada.
+
+**Pasos:**
+1. Abrir la aplicación Mercado Pago.
+2. Seleccionar la opción “Pagar con QR”.
 3. Escanear un código QR inválido.
 
 **Resultado esperado:**  
-El sistema muestra un mensaje de error indicando que el QR no es válido y no permite continuar.
+El sistema muestra un mensaje de error indicando que el código QR no es válido y no permite continuar.
 
 ---
 
-### 🔴 CP-03 – Saldo insuficiente
+### 🔴 CP-04 – Escaneo de código QR expirado
 
 **Precondiciones:**  
-Usuario con sesión iniciada y saldo insuficiente.
+- Usuario con sesión iniciada.
 
 **Pasos:**
 1. Abrir la aplicación Mercado Pago.
-2. Seleccionar “Pagar con QR”.
-3. Escanear un código QR válido.
-4. Visualizar monto y datos del comercio.
-5. Confirmar el pago.
+2. Seleccionar la opción “Pagar con QR”.
+3. Escanear un código QR expirado.
 
 **Resultado esperado:**  
-El sistema muestra un mensaje indicando saldo insuficiente y cancela la operación.
-
----
-
-### 🟡 CP-04 – Usuario cancela antes de confirmar
-
-**Precondiciones:**  
-Usuario con sesión iniciada.
-
-**Pasos:**
-1. Abrir la aplicación Mercado Pago.
-2. Seleccionar “Pagar con QR”.
-3. Escanear un código QR válido.
-4. Visualizar monto y datos del comercio.
-5. Seleccionar la opción “Cancelar”.
-
-**Resultado esperado:**  
-El sistema vuelve a la pantalla inicial sin realizar el pago.
-
----
-
-### 🟡 CP-05 – Intentar volver atrás después de confirmar pago
-
-**Precondiciones:**  
-Usuario con sesión iniciada y saldo suficiente.
-
-**Pasos:**
-1. Abrir la aplicación Mercado Pago.
-2. Seleccionar “Pagar con QR”.
-3. Escanear un código QR válido.
-4. Visualizar monto y datos del comercio.
-5. Confirmar el pago.
-6. Intentar volver atrás.
-
-**Resultado esperado:**  
-El sistema mantiene el pago confirmado y no permite revertir la transacción desde la navegación.
+El sistema informa que el código QR ha expirado y no permite continuar con el pago.
