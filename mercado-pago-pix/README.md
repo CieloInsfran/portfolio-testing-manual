@@ -30,5 +30,12 @@ Los ejercicios están basados en **escenarios realistas**, aunque no corresponda
 - GitHub (documentación)
 
 ---
+Para ver la documentación completa, ingresar a la carpeta del proyecto:
 
+📁 **mercado-pago-pix**
+
+O acceder directamente desde estos enlaces:
+
+- 📄 [Requerimientos Funcionales](./mercado-pago-pix/requerimientos.md)
+- 🧪 [Casos de Prueba](./mercado-pago-pix/casos-de-prueba.md)
 📌 *Este portafolio se encuentra en constante actualización a medida que avanzo en mis estudios.*
